@@ -18,6 +18,10 @@ const productSchema = new Schema(
       type: Schema.Types.ObjectId,
       ref: "Category",
     },
+    price: {
+      type: Number,
+      required: true,
+    },
     reviews: [
       {
         type: Schema.Types.ObjectId,

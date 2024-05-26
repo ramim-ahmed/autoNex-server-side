@@ -6,7 +6,10 @@ const createNewProduct = async (data) => {
 };
 
 const getAllProducts = async () => {
-  const result = await Product.find({}).sort({ createdAt: "desc" });
+  const result = await Product.find({})
+    .populate("category")
+    .sort({ createdAt: "desc" });
+
   return result;
 };
 
